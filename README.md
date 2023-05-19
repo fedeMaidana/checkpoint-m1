@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # **💪 M1 | DRINKS - CheckPoint**
 
 ## **📖 INSTRUCCIONES**
@@ -83,3 +84,6 @@ Para aprobar este CheckPoint es necesario contar con un mínimo de **6 ejercicio
 ## **✅ FEEDBACK**
 
 ### Usa este [**formulario**](https://docs.google.com/forms/d/e/1FAIpQLSfHGK9eRc7N8_qhiOQP9CNkUUNOxwhguf1k9aozP0xJme1-TQ/viewform) para reportar tus observaciones de mejora o errores. Tu feedback es muy importante para seguir mejorando el modelo educativo.
+=======
+# checkpoint-m1
+>>>>>>> e7931df8a405282868d4a0d4fe354908db9e5a23
