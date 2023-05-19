@@ -14,13 +14,14 @@ nuevo método que agregue a los empleados de un arreglo a partir de este dato.
 
 (INPUT) ➡ { nombre: Juan, años: 8 }
 
-(OUTPUT) ➡ 
+(OUTPUT) ➡
                 María
                 /     \
               Pedro    Luis
                       /
                     Juan
 // ACLARACION si los años de antiguedad son menor debe ir a la izquierda y si es mayor o igual a la derecha.
+
 REQUISITOS
 🟢 En caso de querer insertar un empleado que ya se encuentra en el árbol, debe retornar el
 string: "No se puede agregar el mismo empleado".
@@ -30,6 +31,28 @@ string: "No se puede agregar el mismo empleado".
 
 BinarySearchTree.prototype.agregarEmpleado = function (empleado) {
   // Tu código aquí:
+
+  const newNode = new BinarySearchTree(empleado)
+
+  if(empleado === this.value) return 'No se puede agregar el mismo empleado'
+
+  if(empleado.años < this.value.años){
+    if(!this.left){
+      this.left = newNode
+
+      return newNode
+    }
+
+    return this.left.agregarEmpleado(empleado)
+  }else if(empleado.años >= this.value.años){
+    if(!this.right){
+      this.right = newNode
+
+      return newNode
+    }
+
+    return this.right.agregarEmpleado(empleado)
+  }
 };
 
 // ⚠️ NO MODIFICAR NADA POR DEBAJO DE ESTA LÍNEA ⚠️

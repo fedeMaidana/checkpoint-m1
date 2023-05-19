@@ -1,7 +1,7 @@
 /* 4️⃣ ***** EJERCICIO 4 ***** - contarPacientes() 4️⃣
 
-¡El sistema del hospital se ha caído! Ahora necesitamos llevar un registro manual de todos los pacientes 
-del hospital. Para lograr esto te pedimos que contruyas una función que utilice recursión para calcular 
+¡El sistema del hospital se ha caído! Ahora necesitamos llevar un registro manual de todos los pacientes
+del hospital. Para lograr esto te pedimos que contruyas una función que utilice recursión para calcular
 la cantidad de pacientes.
 
 📝 EJEMPLO 📝
@@ -17,8 +17,13 @@ REQUISITOS
 🟢 Puedes utilizar un default parameter para ayudarte.
 */
 
-function contarPacientes(pacientes) {
+function contarPacientes(pacientes = [], count = 0) {
   // Tu código aquí:
+  if (pacientes.length === 0) return "No hay pacientes en la planta"
+
+  if (pacientes.length === 1) return `La cantidad de pacientes en la planta son: ${count + 1}`
+
+  return contarPacientes(pacientes.slice(1), count + 1);
 }
 
 // ⚠️ NO MODIFICAR NADA POR DEBAJO DE ESTA LÍNEA ⚠️

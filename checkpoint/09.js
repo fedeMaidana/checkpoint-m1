@@ -1,10 +1,10 @@
 const { BinarySearchTree } = require("../DS");
 /* ⚠️ NO MODIFICAR NADA POR ENCIMA DE ESTA LÍNEA ⚠️
 
-9️⃣ ***** EJERCICIO 9 ***** - buscandoAlDoctor() 9️⃣ 
+9️⃣ ***** EJERCICIO 9 ***** - buscandoAlDoctor() 9️⃣
 
 Agrega un nuevo método llamado buscandoAlDoctor al árbol binario. Este recibirá como parámetro un ID que
-pertenece a un doctor. Debe devolver el nodo que representa al doctor buscado. 
+pertenece a un doctor. Debe devolver el nodo que representa al doctor buscado.
 Cada nodo es un objeto con las propiedades: id, nombre, edad y especialidad.
 
 📝 EJEMPLO 📝
@@ -32,6 +32,11 @@ REQUISITOS
 
 BinarySearchTree.prototype.buscandoAlDoctor = function (id) {
   // Tu código aquí:
+
+  if(this.value.id === id) return this
+  else if(id < this.value.id && this.left !== null) return this.left.buscandoAlDoctor(id)
+  else if(id > this.value.id && this.right !== null) return this.right.buscandoAlDoctor(id)
+  else return null
 };
 
 // ⚠️ NO MODIFICAR NADA POR DEBAJO DE ESTA LÍNEA ⚠️
